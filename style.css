@@ -148,14 +148,12 @@ img{
 }
 
 @media screen and (max-width: 860px) {
-    /* body {
-      background-color: lightgreen;
-    } */
+   
 
     #circle
     {
-        width: 130vh;
-        height: 130vh;
+        width: 115vh;
+        height: 115vh;
     }
 
    
