@@ -2,7 +2,7 @@ var active = 3;
 
 var mncircles = document.querySelectorAll(".mncircle");
 var sec = document.querySelectorAll(".sec");
-
+var carImgs = document.querySelectorAll(".car-imgs");
 document.querySelector("#main").style.backgroundSize="cover";
 document.querySelector("#main").style.backgroundPosition="center center";
 document.querySelector("#main").style.transition=" 1s";
@@ -21,6 +21,7 @@ gsap.to(sec[active-1], {
 })
 mncircles.forEach(function(val,index){
     val.addEventListener("click",function(){
+
         gsap.to("#circle",{
             rotate:(3-(index+1))*10,
             ease: Expo.easeInOut,
@@ -73,37 +74,16 @@ function greyout()
 
 }
 
-function changeBgImg( index)
+function changeBgImg(index)
 {
-    
-    if(index==2)
-        {
-            document.querySelector("#main").style.backgroundImage = "url('McLaren_720S_GT3.jpg')";
-            
-        }
-        if(index==0)
-        {
-            document.querySelector("#main").style.backgroundImage = "url('Toyota_Supra_GT4.jpg')";
-           
-        }
 
-        if(index==1)
+carImgs[index].removeAttribute("hidden");
+        for(i=0;i<carImgs.length-1;i++)
         {
-            document.querySelector("#main").style.backgroundImage = "url('BMW_M2_CS.jpg')";
-           
+                if(i!=index)
+                {
+                    carImgs[i].setAttribute("hidden", "hidden");
+                }
         }
-
-        if(index==3)
-        {
-            document.querySelector("#main").style.backgroundImage = "url('Buggati.jpg')";
-           
-        }
-
-        if(index==4)
-        {
-            document.querySelector("#main").style.backgroundImage = "url('Ford_Mustang_Cobra_Jet.jpg')";
-           
-        }
-
 
 }
