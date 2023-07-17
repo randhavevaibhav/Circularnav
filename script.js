@@ -74,12 +74,13 @@ function greyout()
 
 function changeBgImg(index)
 {
-
+    console.log("value of index "+index);
 carImgs[index].removeAttribute("hidden");
-        for(i=0;i<carImgs.length-1;i++)
+        for(i=0;i<=carImgs.length-1;i++)
         {
                 if(i!=index)
                 {
+                    console.log("inside if "+i);
                     carImgs[i].setAttribute("hidden", "hidden");
                 }
         }
