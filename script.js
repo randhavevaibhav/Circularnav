@@ -3,9 +3,7 @@ var active = 3;
 var mncircles = document.querySelectorAll(".mncircle");
 var sec = document.querySelectorAll(".sec");
 var carImgs = document.querySelectorAll(".car-imgs");
-document.querySelector("#main").style.backgroundSize="cover";
-document.querySelector("#main").style.backgroundPosition="center center";
-document.querySelector("#main").style.transition=" 1s";
+
 
 
 
